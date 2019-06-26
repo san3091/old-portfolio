@@ -12,6 +12,7 @@ const Home = ({ classes }) => (
     <div className={classes.about}>
       <p>Queer dancer tech witch musician working in whatever medium I can get my hands on.</p>
       <p>I am based in Chicago, IL where I work as a consultant software developer at Table XI. Outside of work I play with electronic music, machine learning, electronics, dance improvisation, installation art, and all the intersections thereof. I want to explore the possibility of self-knowledge through technology, using technologies enhance our capacity for connection.</p>
+      {/* <hr /> */}
     </div>
     <h1 className={classes.taste}>some projects</h1>
     <div className={classes.concentricImg}>
