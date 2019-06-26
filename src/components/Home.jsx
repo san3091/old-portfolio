@@ -34,7 +34,6 @@ const Home = ({ classes }) => (
       <p>The workshop is a string of uninterrupted, continuous movement. It's inspired in the work and language of Bartenieff and Laban. The music score was produced in collaboration with Steven Jackson, who plays live with us.</p>
     </div>
     <div className={classes.concentricInfo}>
-      <p> <Link to="/concentric">Read More...</Link></p>
       <p>Initial workshops happened May 2019 in Chicago at OuterSpace studios and Comfort Station as part of the <a href="https://comfortstationlogansquare.org/calendar/2019/5/19/comfort-society-presents-concentric">Comfort Society Program</a></p>
     </div>
     <div className={classes.ursulaContent}>
@@ -74,7 +73,6 @@ const styles = {
   navBar: {
     gridColumn: "2 / 3",
     gridRow: "2 / 3",
-    // border: "1px solid black",
   },
   about: {
     gridColumn: "3 / 5",
@@ -85,9 +83,8 @@ const styles = {
     gridRow: "3 / 4",
   },
   concentricImg: {
-    gridColumn: "1 / 2",
+    gridColumn: "4/5",
     gridRow: "4 / 5",
-    justifySelf: "end",
     height: "250px",
     "& img": {
       height: "100%",
@@ -96,12 +93,12 @@ const styles = {
   concentricContent: {
     gridColumn: "2/4",
     gridRow: "4/5",
+    textAlign: "right",
   },
   concentricInfo: {
-    alignSelf: "end",
-    gridColumn: "4/5",
+    gridColumn: "1/2",
     gridRow: "4/5",
-    textAlign: "right",
+    transform: "rotate(90deg)",
   },
   ursulaContent: {
     textAlign: "right",
