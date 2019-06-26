@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import injectSheet from "react-jss";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import GridExperiments from './GridExperiments';
-import Home from './Home';
-import Synth from './Synth';
+import React, { Component } from 'react'
+import injectSheet from "react-jss"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import Home from './Home'
+import Synth from './Synth'
 
 class App extends Component {
   render() {
@@ -13,7 +12,6 @@ class App extends Component {
         <main className={classes.global}>
           <Route path="/" exact component={Home} />
           <Route path="/arp-ambient" component={Synth} />
-          <Route path="/grid-experiments" component={GridExperiments} />
         </main>
       </Router>
     );

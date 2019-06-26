@@ -4,11 +4,12 @@
   "private": true,
   "homepage": "https://san3091.github.io/",
   "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-jss": "^8.6.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
+    "three": "^0.106.0",
     "tone": "^0.12.80"
   },
   "scripts": {

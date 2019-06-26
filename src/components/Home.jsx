@@ -1,12 +1,14 @@
 import * as React from "react"
 import injectSheet from "react-jss"
 import { Link } from "react-router-dom"
+import RotatingBox from "./RotatingBox"
+import JigglingPolyhedron from "./JigglingPolyhedron"
 import concentricThumbnail from "../assets/concentricThumbnail.jpg"
 
 const Home = ({ classes }) => (
   <div className={classes.gridWrapper}>
     <h1 className={classes.header}>Santiago Quintana</h1>
-    <div className={classes.navBar}>
+    {/* <div className={classes.navBar}>
       <div className={classes.navItem}>
         <Link to="/ursula">Ursula; ML voice synthesis</Link>
       </div>
@@ -16,7 +18,8 @@ const Home = ({ classes }) => (
       <div className={classes.navItem}>
         <Link to="/concentric">Concentric</Link>
       </div>
-    </div>
+    </div> */}
+    <JigglingPolyhedron stylingClass={classes.navBar}/>
     <div className={classes.about}>
       <p>Queer dancer tech witch musician working in whatever medium I can get my hands on to craft experiences.</p>
       <p>I am based in Chicago, IL where I work as a consultant software developer at Table XI. Outside of work I play with electronic music, machine learning, electronics, dance improvisation, installation art, and all the intersections thereof. I want to explore the possibility of self-knowledge through technology, using technologies enhance our capacity for connection.</p>
@@ -41,11 +44,12 @@ const Home = ({ classes }) => (
       <p><Link to="/ursula">Read More...</Link></p>
     </div>
     <div className={classes.ursulaSample}>
-      <iframe title="ursula sample" width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/641998821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+      <iframe title="ursula sample" width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/641998821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     </div>
-    <div className={classes.ursulaInfo}>
+      <RotatingBox stylingClass={classes.ursulaInfo}/>
+    {/* <div className={classes.ursulaInfo}>
       <p>This project will likely evolve into a multi-media dance/music performance/installation. But really anything can happen.</p>
-    </div>
+    </div> */}
   </div>
 )
 
@@ -60,7 +64,7 @@ const styles = {
     maxWidth: "1500px",
     marginTop: "100px",
     marginLeft: "-60px",
-    gridTemplate: "0.5fr 2fr 0.5fr 2fr 2fr / 1fr 1fr 1fr 1fr",
+    gridTemplate: "0.2fr 1fr 0.2fr 1fr 1fr / 1fr 1fr 1fr 1fr",
     gridGap: "15px",
   },
   header: {
@@ -70,6 +74,7 @@ const styles = {
   navBar: {
     gridColumn: "2 / 3",
     gridRow: "2 / 3",
+    // border: "1px solid black",
   },
   about: {
     gridColumn: "3 / 5",
@@ -107,6 +112,7 @@ const styles = {
     gridColumn: "4/5",
     gridRow: "5/6",
     alignSelf: "end",
+    height: "100%",
   },
   ursulaSample: {
     gridColumn: "3/4",
