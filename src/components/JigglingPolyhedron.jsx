@@ -76,7 +76,7 @@ export default ({ stylingClass }) => {
       stop()
       scene.remove(icosahedron)
       geometry.dispose()
-      material.dispoase()
+      material.dispose()
     }
   }, [])
 

@@ -21,7 +21,7 @@ export default ({ stylingClass }) => {
 
     // CAMERA
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000)
-    camera.position.z = 22
+    camera.position.z = 40
 
     // LIGHTS
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
@@ -32,45 +32,28 @@ export default ({ stylingClass }) => {
     scene.add(pointLight)
 
     // OBJECTS
-    const boxLength = 25
-    const boxWidth = 3
-    const boxHeight = 3
+    const radius = 12
+    const tubeRadius = 4
 
-    const geometry = new THREE.BoxGeometry(boxLength, boxHeight, boxWidth)
+    const geometry = new THREE.TorusKnotGeometry(radius, tubeRadius, 20, 4)
     const material = new THREE.MeshLambertMaterial({
       wireframe: true,
       wireframeLinewidth: 3,
       color: 0x454545
     })
 
-    const box = new THREE.Mesh(geometry, material)
-    box.rotation.x += 1.4
-    scene.add(box)
-
-    const box2 = new THREE.Mesh(geometry, material)
-    box2.rotation.y += 1.4
-    scene.add(box2)
-
-    const box3 = new THREE.Mesh(geometry, material)
-    box3.rotation.z += 1.4
-    scene.add(box3)
+    const knot1 = new THREE.Mesh(geometry, material)
+    knot1.rotation.x += 1.4
+    scene.add(knot1)
 
     const renderScene = () => {
       renderer.render(scene, camera)
     }
 
     const animate = () => {
-      box.rotation.x += 0.01
-      box.rotation.y += 0.02
-      box.rotation.z += 0.03
-
-      box2.rotation.x += 0.03
-      box2.rotation.y += 0.01
-      box2.rotation.z += 0.02
-
-      box3.rotation.x += 0.02
-      box3.rotation.y += 0.03
-      box3.rotation.z += 0.01
+      knot1.rotation.x += 0.01
+      knot1.rotation.y += 0.02
+      knot1.rotation.z += 0.03
 
       renderScene()
       frameId = window.requestAnimationFrame(animate)
@@ -92,7 +75,7 @@ export default ({ stylingClass }) => {
 
     return () => {
       stop()
-      scene.remove(box)
+      scene.remove(knot1)
       geometry.dispose()
       material.dispose()
     }
