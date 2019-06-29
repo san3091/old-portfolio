@@ -34,16 +34,20 @@ export default ({ stylingClass }) => {
     // OBJECTS
     const radius = 25
 
-    const geometry = new THREE.IcosahedronGeometry(radius)
+    const icosahedronGeometry = new THREE.IcosahedronGeometry(radius)
+    const dodecahedronGeometry = new THREE.DodecahedronGeometry(radius)
     const material = new THREE.MeshLambertMaterial({
       wireframe: true,
       wireframeLinewidth: 3,
       color: 0x454545
     })
 
-    const icosahedron= new THREE.Mesh(geometry, material)
+    const icosahedron= new THREE.Mesh(icosahedronGeometry, material)
     icosahedron.rotation.x += 1.4
     scene.add(icosahedron)
+
+    const dodecahedron = new THREE.Mesh(dodecahedronGeometry, material)
+    scene.add(dodecahedron)
 
     const renderScene = () => {
       renderer.render(scene, camera)
@@ -53,6 +57,10 @@ export default ({ stylingClass }) => {
       icosahedron.rotation.x += 0.01
       icosahedron.rotation.y += 0.02
       icosahedron.rotation.z += 0.03
+
+      dodecahedron.rotation.x += 0.02
+      dodecahedron.rotation.y += 0.03
+      dodecahedron.rotation.z += 0.01
 
       renderScene()
       frameId = window.requestAnimationFrame(animate)
@@ -75,7 +83,8 @@ export default ({ stylingClass }) => {
     return () => {
       stop()
       scene.remove(icosahedron)
-      geometry.dispose()
+      icosahedronGeometry.dispose()
+      dodecahedronGeometry.dispose()
       material.dispose()
     }
   }, [])
