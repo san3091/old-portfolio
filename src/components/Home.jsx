@@ -47,6 +47,16 @@ const style ={
     }
   },
 
+  navBar: {
+    height: "200px",
+    width: "100%",
+  },
+
+  ursulaInfo: {
+    height: "200px",
+    width: "100%",
+  },
+
   "@media (min-width: 600px)": {
     header: {
       gridColumn: "2 / 3",
