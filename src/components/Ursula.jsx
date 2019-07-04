@@ -68,74 +68,76 @@ const Ursula = ({ classes }) => (
 )
 
 const style = {
-  backLink: {
-    gridColumn: "1/2",
-    gridRow: "1/2",
-    textAlign: "right",
-    alignSelf: "center"
-  },
-  header: {
-    gridColumn: "2/3",
-    gridRow: "1/2",
-  },
-  octopus: {
-    gridColumn: "4/5",
-    gridRow: "1/3",
-    height: "100%",
-  },
-  intro: {
-    gridColumn: "2/4",
-    gridRow: "2/3"
-  },
-  progress: {
-    gridColumn: "2/5",
-    gridRow: "3/4"
-  },
-  sampleOne: {
-    gridColumn:"1/2",
-    gridRow: "3/4",
-    transform: "rotate(90deg)",
-    justifySelf: "end",
-  },
-  success: {
-    gridColumn: "3/5",
-    gridRow: "4/6",
-  },
-  samples: {
-    gridColumn: "2/3",
-    gridRow: "4/5",
-  },
-  email: {
-    gridColumn: "1/2",
-    gridRow: "5/6",
-    width: "160px",
-    justifySelf: "end",
-    textAlign: "right"
-  },
-  virginia: {
-    gridColumn: "2/4",
-    gridRow: "5/7",
-  },
-  virginiaSamples: {
-    gridColumn: "4/5",
-    gridRow: "5/7"
-  },
-  finally: {
-    gridColumn: "1/2",
-    gridRow: "6/7",
-    textAlign: "right"
-  },
-  longSampleOne: {
-    gridColumn: "2/3",
-    gridRow: "6/7",
-  },
-  longSampleTwo: {
-    gridColumn: "3/4",
-    gridRow: "6/7"
-  },
-  explore: {
-    gridColumn: "4/5",
-    gridRow: "6/7",
+  "@media (min-width: 600px)": {
+    backLink: {
+      gridColumn: "1/2",
+      gridRow: "1/2",
+      textAlign: "right",
+      alignSelf: "center"
+    },
+    header: {
+      gridColumn: "2/3",
+      gridRow: "1/2",
+    },
+    octopus: {
+      gridColumn: "4/5",
+      gridRow: "1/3",
+      height: "100%",
+    },
+    intro: {
+      gridColumn: "2/4",
+      gridRow: "2/3"
+    },
+    progress: {
+      gridColumn: "2/5",
+      gridRow: "3/4"
+    },
+    sampleOne: {
+      gridColumn:"1/2",
+      gridRow: "3/4",
+      transform: "rotate(90deg)",
+      justifySelf: "end",
+    },
+    success: {
+      gridColumn: "3/5",
+      gridRow: "4/6",
+    },
+    samples: {
+      gridColumn: "2/3",
+      gridRow: "4/5",
+    },
+    email: {
+      gridColumn: "1/2",
+      gridRow: "5/6",
+      width: "160px",
+      justifySelf: "end",
+      textAlign: "right"
+    },
+    virginia: {
+      gridColumn: "2/4",
+      gridRow: "5/7",
+    },
+    virginiaSamples: {
+      gridColumn: "4/5",
+      gridRow: "5/7"
+    },
+    finally: {
+      gridColumn: "1/2",
+      gridRow: "6/7",
+      textAlign: "right"
+    },
+    longSampleOne: {
+      gridColumn: "2/3",
+      gridRow: "6/7",
+    },
+    longSampleTwo: {
+      gridColumn: "3/4",
+      gridRow: "6/7"
+    },
+    explore: {
+      gridColumn: "4/5",
+      gridRow: "6/7",
+    }
   }
 }
 
