@@ -40,54 +40,59 @@ const Home = ({ classes }) => (
 )
 
 const style ={
-  header: {
-    gridColumn: "2 / 3",
-    gridRow: "1 / 2",
-  },
-  navBar: {
-    gridColumn: "2 / 3",
-    gridRow: "2 / 3",
-  },
-  about: {
-    gridColumn: "3 / 5",
-    gridRow: "2 / 3",
-  },
-  taste: {
-    gridColumn: "3 / 5",
-    gridRow: "3 / 4",
-  },
   concentricImg: {
-    gridColumn: "4/5",
-    gridRow: "4 / 5",
     height: "250px",
     "& img": {
       height: "100%",
     }
   },
-  concentricContent: {
-    gridColumn: "2/4",
-    gridRow: "4/5",
-    textAlign: "right",
-  },
-  concentricInfo: {
-    gridColumn: "1/2",
-    gridRow: "4/5",
-    transform: "rotate(90deg)",
-  },
-  ursulaContent: {
-    textAlign: "right",
-    gridColumn: "1/3",
-    gridRow: "5/6",
-  },
-  ursulaInfo: {
-    gridColumn: "4/5",
-    gridRow: "5/6",
-    alignSelf: "end",
-    height: "100%",
-  },
-  ursulaSample: {
-    gridColumn: "3/4",
-    gridRow: "5/6",
+
+  "@media (min-width: 600px)": {
+    header: {
+      gridColumn: "2 / 3",
+      gridRow: "1 / 2",
+    },
+    navBar: {
+      gridColumn: "2 / 3",
+      gridRow: "2 / 3",
+    },
+    about: {
+      gridColumn: "3 / 5",
+      gridRow: "2 / 3",
+    },
+    taste: {
+      gridColumn: "3 / 5",
+      gridRow: "3 / 4",
+    },
+    concentricImg: {
+      gridColumn: "4/5",
+      gridRow: "4 / 5",
+    },
+    concentricContent: {
+      gridColumn: "2/4",
+      gridRow: "4/5",
+      textAlign: "right",
+    },
+    concentricInfo: {
+      gridColumn: "1/2",
+      gridRow: "4/5",
+      transform: "rotate(90deg)",
+    },
+    ursulaContent: {
+      textAlign: "right",
+      gridColumn: "1/3",
+      gridRow: "5/6",
+    },
+    ursulaInfo: {
+      gridColumn: "4/5",
+      gridRow: "5/6",
+      alignSelf: "end",
+      height: "100%",
+    },
+    ursulaSample: {
+      gridColumn: "3/4",
+      gridRow: "5/6",
+    },
   },
 }
 

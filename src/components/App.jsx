@@ -41,22 +41,31 @@ const style = {
     "& code": {
       backgroundColor: "#ebebeb",
     }
+  },
 
-  },
   gridWrapper: {
-    display: "grid",
-    width: "100%",
-    transform: "rotate(-12deg)",
-    maxWidth: "1500px",
-    marginTop: "100px",
-    marginLeft: "-60px",
-    gridTemplate: "0.2fr 1fr 0.2fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr",
-    gridGap: "15px",
-  },
- "@media (max-width: 940px)": {
-    gridWrapper: {
-      transform: "none",
+    padding: "0 20px",
+
+    "& > div": {
+      margin: "20px auto",
     }
+  },
+
+ "@media (min-width: 940px)": {
+    gridWrapper: {
+      transform: "rotate(-12deg)",
+    }
+  },
+  "@media (min-width: 600px)": {
+    gridWrapper: {
+      display: "grid",
+      width: "100%",
+      maxWidth: "1500px",
+      marginTop: "100px",
+      marginLeft: "-60px",
+      gridTemplate: "0.2fr 1fr 0.2fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr",
+      gridGap: "15px",
+    },
   }
 }
 export default injectSheet(style)(App);
