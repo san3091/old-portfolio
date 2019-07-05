@@ -11,13 +11,11 @@ const Home = ({ classes }) => (
     <JigglingPolyhedron stylingClass={classes.navBar}/>
     <div className={classes.about}>
       <p>Queer dancer tech witch musician working in whatever medium I can get my hands on.</p>
-      <p>I am based in Chicago, IL where I work as a consultant software developer at Table XI. Outside of work I play with electronic music, machine learning, electronics, dance improvisation, installation art, and all the intersections thereof.</p>
+      <p>I am based in Chicago, IL where I work as a consultant software developer at Table XI.</p>
+      <p>Outside of work I play with electronic music, machine learning, electronics, dance improvisation, installation art, and all the intersections thereof.</p>
       {/* <hr /> */}
     </div>
-    <h1 className={classes.taste}>some projects</h1>
-    <div className={classes.concentricImg}>
-      <Link to="/concentric"> <img src={concentricThumbnail} alt="concentric thumbnail"/></Link>
-    </div>
+    <h1 className={classes.taste}>my latest stuff</h1>
     <div className={classes.concentricContent}>
       <h3>Concentric</h3>
       <p>A performance/workshop intended to be an experiential introduction to dance improvisation. It is around 45 minutes long and consists of three explorations that build and support each other, culminating in 10-15 munites of free improv.</p>
@@ -25,6 +23,9 @@ const Home = ({ classes }) => (
     </div>
     <div className={classes.concentricInfo}>
       <p>Initial workshops happened May 2019 in Chicago at OuterSpace studios and Comfort Station as part of the <a href="https://comfortstationlogansquare.org/calendar/2019/5/19/comfort-society-presents-concentric">Comfort Society Program</a></p>
+    </div>
+    <div className={classes.concentricImg}>
+      <Link to="/concentric"> <img src={concentricThumbnail} alt="concentric thumbnail"/></Link>
     </div>
     <div className={classes.ursulaContent}>
       <Link to="/ursula"><h3>Ursula</h3></Link>
@@ -35,7 +36,7 @@ const Home = ({ classes }) => (
     <div className={classes.ursulaSample}>
       <iframe title="ursula sample" width="100%" height="300" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/641998821&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
     </div>
-    <RotatingBox stylingClass={classes.ursulaInfo}/>
+    <RotatingBox stylingClass={classes.boxAnimation}/>
   </>
 )
 
@@ -52,19 +53,20 @@ const style ={
     width: "100%",
   },
 
-  ursulaInfo: {
-    height: "200px",
+  boxAnimation: {
+    height: "300px",
     width: "100%",
   },
 
-  "@media (min-width: 600px)": {
+  "@media (min-width: 1000px)": {
     header: {
-      gridColumn: "2 / 3",
+      gridColumn: "3 / 4",
       gridRow: "1 / 2",
     },
     navBar: {
       gridColumn: "2 / 3",
-      gridRow: "2 / 3",
+      gridRow: "1 / 3",
+      height: "70%",
     },
     about: {
       gridColumn: "3 / 5",
@@ -84,6 +86,7 @@ const style ={
       textAlign: "right",
     },
     concentricInfo: {
+      alignSelf: "center",
       gridColumn: "1/2",
       gridRow: "4/5",
       transform: "rotate(90deg)",
@@ -93,7 +96,7 @@ const style ={
       gridColumn: "1/3",
       gridRow: "5/6",
     },
-    ursulaInfo: {
+    boxAnimation: {
       gridColumn: "4/5",
       gridRow: "5/6",
       alignSelf: "end",

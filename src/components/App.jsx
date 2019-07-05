@@ -51,18 +51,13 @@ const style = {
     }
   },
 
- "@media (min-width: 940px)": {
-    gridWrapper: {
-      transform: "rotate(-12deg)",
-    }
-  },
-  "@media (min-width: 600px)": {
+  "@media (min-width: 1000px)": {
     gridWrapper: {
       display: "grid",
       width: "100%",
+      transform: "rotate(-12deg)",
       maxWidth: "1500px",
       marginTop: "100px",
-      marginLeft: "-60px",
       gridTemplate: "0.2fr 1fr 0.2fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr",
       gridGap: "15px",
     },
