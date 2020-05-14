@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import injectSheet from "react-jss"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import { CSSTransition, TransitionGroup } from "react-transition-group"
 import ScrollToTop from "./ScrollToTop"
 import Home from './Home'
@@ -14,11 +14,10 @@ class App extends Component {
         <Route render={({ location }) => (
           <ScrollToTop>
             <main className={classes.global}>
-              <div className={classes.gridWrapper}>
                 <TransitionGroup>
                   <CSSTransition
                     timeout={300}
-                    // key={location.key}
+                    key={location.key}
                     unmountOnExit
                     classNames={{
                       enter: classes.fadeEnter,
@@ -26,13 +25,12 @@ class App extends Component {
                       exit: classes.fadeExit,
                       exitActive: classes.fadeExitActive
                     }}>
-                    <Switch location={location}>
-                      <Route exact path="/" component={Home} />
-                      <Route exact path="/ursula" component={Ursula} />
-                    </Switch>
+                      <div className={classes.gridWrapper}>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/ursula" component={Ursula} />
+                      </div>
                   </CSSTransition>
                 </TransitionGroup>
-              </div>
             </main>
           </ScrollToTop>
         )} />
@@ -71,20 +69,25 @@ const style = {
 
   fadeEnter: {
     opacity: 0
+    // color: "red"
   },
 
   fadeEnterActive: {
     opacity: 1,
-    transition: "opacity 150ms ease-in"
+    transition: "opacity 1000ms"
+    // color: "blue",
+    // transition: "color 100ms"
   },
 
   fadeExit: {
     opacity: 1
+    // color: "blue"
   },
 
   fadeExitActive: {
     opacity: 0,
-    transition: "opacity 100ms ease-in"
+    // color: "red",
+    transition: "opacity 1000ms"
   },
 
   "@media (min-width: 1000px)": {
